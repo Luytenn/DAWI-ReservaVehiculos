@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+	
+	
+	 <title>Mantenimiento de Autos</title>
+
+  <link rel="canonical" href="https://maquinarias.pe/" />
+  <link rel='shortlink' href="https://maquinarias.pe/" />
+  <link href="css/estilos.css" rel="stylesheet" type="text/css">
+  
+  <link rel="icon" type="image/png" href="https://maquinarias.pe/wp-content/themes/maquinarias/img/icomaquinarias.png" sizes="32x32" />
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maquinarias.pe/wp-content/themes/maquinarias/css/main.css">
+  <link rel="stylesheet" href="https://maquinarias.pe/wp-content/themes/maquinarias/css/site.css">
+  <link rel="stylesheet" href="https://maquinarias.pe/wp-content/themes/maquinarias/css/new.css?v=9988839">
+	
+
+</head>
+
+
+
+
+<body>
+
+<script>
+    window.fbAsyncInit = function() { FB.init({appId:'312457599293252', xfbml:true, version:'v3.0'}); FB.AppEvents.logPageView(); };
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  
+  
+  <header class="header">
+        <div class="limit limit--header">
+      <div class="mobile mobile__vermenu verMenuMobile">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p class="header__h1"><a href=""><img src="img/Logo3.png" alt="" /></a>Welcome <span sec:authentication="principal.username"> User</span> </p>
+      
+      <nav class="menu">
+        <ul>
+          
+          <li class="menu__item">
+            <a href="principal.jsp" class="menu__enlace directo">Inicio</a>          
+          </li>
+                                    
+          <li class="menu__item menu__item--marcas">
+            <a href="nosotros.jsp" class="menu__enlace directo">Nosotros</a>
+          </li>
+
+          <li class="menu__item">
+            <a th:href="@{/dashboard}"  class="menu__enlace directo ">Dashboard</a>
+          </li>
+
+        <li class="menu__item">
+            <a href="" class="menu__enlace directo ">Contactenos</a>
+          </li>
+
+                 <li class="menu__item" sec:authorize="isAuthenticated()">
+            <a th:href="@{/logout}" class="menu__enlace directo ">Logout</a>
+         
+          </li>         
+        </ul>
+      </nav>
+      <div class="mobile menu__item menu__item--buscar mobile__botonbuscar">
+        <a href="#" class="menu__enlace abrirBox" data-target="box-buscar">
+          <img class="menu__enlace__lupa" src="https://maquinarias.pe/wp-content/themes/maquinarias/img/buscar.png" alt="">
+          <img class="menu__enlace__lupaHover" src="https://maquinarias.pe/wp-content/themes/maquinarias/img/buscar-celeste.png" alt="">
+        </a>
+      </div>
+      <div class="clear"></div>
+    </div>
+      </header>
+  
+  
+  
+  
+  
+  <div class="headerEspacio"></div>  <section class="sliderPrincipal">
+    <div class="swiper-container sliderPrincipal--animacion">
+      <div class="swiper-wrapper">
+      
+                <div class="swiper-slide sp__slider" style="background-image:url(https://irp-cdn.multiscreensite.com/f78ca698/DESKTOP/jpg/2276077-banner2-aab32.jpg);">
+          <article class="limit">
+            <img src="https://maquinarias.pe/wp-content/themes/maquinarias/img/base-slider.jpg" alt="" class="sp__slider__base" />
+            <p class="sp__slider__contenido ">
+              <strong class="sp__titulo"></strong><br>
+              <span class="sp__titulo sp__titulo--subtitulo"></span><br>
+            </p>
+          </article>         
+        </div>
+        
+                <div class="swiper-slide sp__slider" style="background-image: url(https://www.minsalud.gov.co/fotos_carrusel_2020/Vehiculos.jpg)">
+          <article class="limit">
+            <img src="https://maquinarias.pe/wp-content/themes/maquinarias/img/base-slider.jpg" alt="" class="sp__slider__base" />
+            <p class="sp__slider__contenido ">
+              <strong class="sp__titulo"></strong><br>
+              <span class="sp__titulo sp__titulo--subtitulo"></span><br>             
+            </p>
+          </article>
+        </div>
+        
+                <div class="swiper-slide sp__slider" style="background-image:url(https://www.mvptoyota.com/assets/d563/img/banner_cars_fanout.png);">
+          <article class="limit">
+            <img src="https://maquinarias.pe/wp-content/themes/maquinarias/img/base-slider.jpg" alt="" class="sp__slider__base" />
+            <p class="sp__slider__contenido ">
+              <strong class="sp__titulo"></strong><br>
+              <span class="sp__titulo sp__titulo--subtitulo"></span><br>         
+            </p>
+          </article>        
+        </div>
+        
+                <div class="swiper-slide sp__slider" style="background-image:url(https://static.websguru.com.ar/var/m_7/7d/7d5/12068/193466-banner.jpg?v=7.3.45002);">
+          <article class="limit">
+            <img src="https://maquinarias.pe/wp-content/themes/maquinarias/img/base-slider.jpg" alt="" class="sp__slider__base" />
+            <p class="sp__slider__contenido ">
+              <strong class="sp__titulo"> </strong><br>
+              <span class="sp__titulo sp__titulo--subtitulo"></span><br>         
+            </p>
+          </article>        
+        </div>
+        
+                <div class="swiper-slide sp__slider" style="background-image:url(https://www.autosonline.cl/images/stories/desabolladura-y-pintura-de-autos.jpg);">
+          <article class="limit">
+            <img src="https://maquinarias.pe/wp-content/themes/maquinarias/img/base-slider.jpg" alt="" class="sp__slider__base" />
+            <p class="sp__slider__contenido ">
+              <strong class="sp__titulo"></strong><br>
+              <span class="sp__titulo sp__titulo--subtitulo"></span><br>             
+            </p>
+          </article>        
+        </div>           
+   </div>
+    </div>
+    <div class="swiper-pagination sliderPrincipal__nav"></div>
+    
+    
+  </section>
+  
+  
+  
+  
+   <footer>
+			<p>Derechos Reservados. Lima, Peru</p>
+			<img src="img/twitter.png" alt="Twitter">
+			<img src="img/youtube.png" alt="Youtube">
+	</footer>
+  
+  
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEVNbb_TtMEKYCPtYFYmfP1eqNBcAQox4"></script> -->
+  <script src="https://maquinarias.pe/wp-content/themes/maquinarias/js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="https://maquinarias.pe/wp-content/themes/maquinarias/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="https://maquinarias.pe/wp-content/themes/maquinarias/js/plugins.js"></script>
+  <script>var urlSrc = 'https://maquinarias.pe/wp-content/themes/maquinarias/', urlSite='https://maquinarias.pe', token='2e82713609153fcd3db790e567a271f900e3c6efb79aa00b938d0586f6e9475f'; </script>
+  <script src="https://maquinarias.pe/wp-content/themes/maquinarias/js/main.js"></script>
+  
+  
+  
+  
+  
+
+	
+</body>
+</html>
